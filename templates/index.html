@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Domain Info Lookup</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Get Domain Name Info</h1>
+    <form method="POST">
+      <input type="text" name="domain" placeholder="Enter Domain (e.g. example.com)" required>
+      <button type="submit">Lookup</button>
+    </form>
+
+    {% if info %}
+      <div class="result">
+        <h2>Result:</h2>
+        <ul>
+          {% for key, value in info.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

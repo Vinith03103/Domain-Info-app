@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Styling */
+.container {
+  background-color: #1f1f1f;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  max-width: 800px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00ffcc;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  border: 2px solid #00ffcc;
+  background: #2e2e2e;
+  color: #fff;
+  border-radius: 8px;
+  width: 70%;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00ffaa;
+}
+
+button {
+  padding: 12px 20px;
+  background: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #00ffaa;
+}
+
+/* Result Box Styling */
+.result {
+  background: #2e2e2e;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #00ffcc;
+  max-height: 400px;
+  overflow-y: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.result ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result li {
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+.result li:last-child {
+  border-bottom: none;
+}
+
+.result strong {
+  color: #00ffaa;
+}
+
+/* Scrollbar Customization */
+.result::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
